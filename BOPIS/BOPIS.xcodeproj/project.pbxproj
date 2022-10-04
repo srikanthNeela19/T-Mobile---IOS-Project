@@ -59,7 +59,6 @@
 		57D37FCA28EAFCEE00DEE676 /* BOPIS */ = {
 			isa = PBXGroup;
 			children = (
-				74937DA728EC10BC00F0E79D /* Protocol */,
 				74937DA628EC10AE00F0E79D /* Network */,
 				7437A7E528EB125B00352915 /* Extension */,
 				7437A7E328EB121900352915 /* Utility */,
@@ -135,13 +134,6 @@
 			children = (
 			);
 			path = Network;
-			sourceTree = "<group>";
-		};
-		74937DA728EC10BC00F0E79D /* Protocol */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Protocol;
 			sourceTree = "<group>";
 		};
 		74937DA828EC10F800F0E79D /* ViewControllers */ = {
