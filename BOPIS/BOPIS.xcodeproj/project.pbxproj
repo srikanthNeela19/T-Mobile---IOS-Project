@@ -15,6 +15,10 @@
 		7437A7EB28EB13AB00352915 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7437A7EA28EB13AB00352915 /* StringExtension.swift */; };
 		7437A7ED28EB13BE00352915 /* IntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7437A7EC28EB13BE00352915 /* IntExtension.swift */; };
 		74937D8728EBEBD700F0E79D /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74937D8628EBEBD700F0E79D /* SplashView.swift */; };
+		74937DFB28EC24BE00F0E79D /* CustomProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74937DFA28EC24BE00F0E79D /* CustomProtocols.swift */; };
+		74937DFD28EC24E900F0E79D /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74937DFC28EC24E900F0E79D /* Network.swift */; };
+		74937DFF28EC250D00F0E79D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74937DFE28EC250D00F0E79D /* User.swift */; };
+		74937E0128EC252500F0E79D /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74937E0028EC252500F0E79D /* LoginViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +31,10 @@
 		7437A7EA28EB13AB00352915 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		7437A7EC28EB13BE00352915 /* IntExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntExtension.swift; sourceTree = "<group>"; };
 		74937D8628EBEBD700F0E79D /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		74937DFA28EC24BE00F0E79D /* CustomProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProtocols.swift; sourceTree = "<group>"; };
+		74937DFC28EC24E900F0E79D /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		74937DFE28EC250D00F0E79D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		74937E0028EC252500F0E79D /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,13 +48,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5725FF4528EC2298001F3389 /* Protocol */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Protocol;
-			sourceTree = "<group>";
-		};
 		57D37FBF28EAFCEE00DEE676 = {
 			isa = PBXGroup;
 			children = (
@@ -66,7 +67,7 @@
 		57D37FCA28EAFCEE00DEE676 /* BOPIS */ = {
 			isa = PBXGroup;
 			children = (
-				5725FF4528EC2298001F3389 /* Protocol */,
+				74937DF928EC249800F0E79D /* Protocol */,
 				74937DA628EC10AE00F0E79D /* Network */,
 				7437A7E528EB125B00352915 /* Extension */,
 				7437A7E328EB121900352915 /* Utility */,
@@ -126,6 +127,7 @@
 		74937DA428EC108600F0E79D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				74937DFE28EC250D00F0E79D /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -133,6 +135,7 @@
 		74937DA528EC109500F0E79D /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				74937E0028EC252500F0E79D /* LoginViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 		74937DA628EC10AE00F0E79D /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				74937DFC28EC24E900F0E79D /* Network.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -149,6 +153,14 @@
 			children = (
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		74937DF928EC249800F0E79D /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				74937DFA28EC24BE00F0E79D /* CustomProtocols.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,9 +235,13 @@
 			files = (
 				7437A7EB28EB13AB00352915 /* StringExtension.swift in Sources */,
 				57D37FCE28EAFCEE00DEE676 /* ContentView.swift in Sources */,
+				74937DFD28EC24E900F0E79D /* Network.swift in Sources */,
 				57D37FCC28EAFCEE00DEE676 /* BOPISApp.swift in Sources */,
 				7437A7ED28EB13BE00352915 /* IntExtension.swift in Sources */,
+				74937DFF28EC250D00F0E79D /* User.swift in Sources */,
 				7437A7E928EB12FB00352915 /* Constant.swift in Sources */,
+				74937DFB28EC24BE00F0E79D /* CustomProtocols.swift in Sources */,
+				74937E0128EC252500F0E79D /* LoginViewModel.swift in Sources */,
 				74937D8728EBEBD700F0E79D /* SplashView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
