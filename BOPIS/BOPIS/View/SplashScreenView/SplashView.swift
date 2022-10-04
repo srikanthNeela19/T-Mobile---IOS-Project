@@ -15,20 +15,20 @@ struct SplashView: View {
             if isActive {
                 ContentView()
             } else {
-                Text("My awesome splash screen!")
-                    .font(.largeTitle)
+                Image("BOPIS-portait")
+                    .resizable()
+                    .scaledToFill()
+                    .ignoresSafeArea()
             }
         }
         .onAppear {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
                 withAnimation {
                     self.isActive = true
                 }
             }
             
         }
-        
-        
     }
 }
 
