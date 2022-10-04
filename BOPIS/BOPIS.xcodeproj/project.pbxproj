@@ -40,6 +40,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5725FF4528EC2298001F3389 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
 		57D37FBF28EAFCEE00DEE676 = {
 			isa = PBXGroup;
 			children = (
@@ -59,6 +66,7 @@
 		57D37FCA28EAFCEE00DEE676 /* BOPIS */ = {
 			isa = PBXGroup;
 			children = (
+				5725FF4528EC2298001F3389 /* Protocol */,
 				74937DA628EC10AE00F0E79D /* Network */,
 				7437A7E528EB125B00352915 /* Extension */,
 				7437A7E328EB121900352915 /* Utility */,
