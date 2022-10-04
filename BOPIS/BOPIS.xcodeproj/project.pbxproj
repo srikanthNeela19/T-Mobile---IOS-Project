@@ -82,7 +82,6 @@
 			isa = PBXGroup;
 			children = (
 				74937D8528EBEBB800F0E79D /* SplashScreenView */,
-				7437A7E728EB127B00352915 /* ViewControllers */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -102,13 +101,6 @@
 				7437A7EC28EB13BE00352915 /* IntExtension.swift */,
 			);
 			path = Extension;
-			sourceTree = "<group>";
-		};
-		7437A7E728EB127B00352915 /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		74937D8528EBEBB800F0E79D /* SplashScreenView */ = {
