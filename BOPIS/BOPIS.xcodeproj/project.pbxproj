@@ -59,13 +59,13 @@
 		57D37FCA28EAFCEE00DEE676 /* BOPIS */ = {
 			isa = PBXGroup;
 			children = (
-				7437A7EE28EB13DF00352915 /* Protocol */,
+				74937D8A28EC0BFA00F0E79D /* Network */,
+				74937D8928EC0BE600F0E79D /* Protocol */,
 				7437A7E528EB125B00352915 /* Extension */,
-				7437A7E428EB124D00352915 /* Network */,
 				7437A7E328EB121900352915 /* Utility */,
-				7437A7E028EB112800352915 /* Model */,
+				74937D8C28EC0C1F00F0E79D /* Model */,
 				7437A7E228EB118500352915 /* View */,
-				7437A7E128EB114200352915 /* ViewModel */,
+				74937D8B28EC0C0800F0E79D /* ViewModel */,
 				57D37FCB28EAFCEE00DEE676 /* BOPISApp.swift */,
 				57D37FCD28EAFCEE00DEE676 /* ContentView.swift */,
 				57D37FCF28EAFCEF00DEE676 /* Assets.xcassets */,
@@ -80,20 +80,6 @@
 				57D37FD228EAFCEF00DEE676 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		7437A7E028EB112800352915 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		7437A7E128EB114200352915 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		7437A7E228EB118500352915 /* View */ = {
@@ -113,13 +99,6 @@
 			path = Utility;
 			sourceTree = "<group>";
 		};
-		7437A7E428EB124D00352915 /* Network */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Network;
-			sourceTree = "<group>";
-		};
 		7437A7E528EB125B00352915 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,19 +115,40 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		7437A7EE28EB13DF00352915 /* Protocol */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Protocol;
-			sourceTree = "<group>";
-		};
 		74937D8528EBEBB800F0E79D /* SplashScreenView */ = {
 			isa = PBXGroup;
 			children = (
 				74937D8628EBEBD700F0E79D /* SplashView.swift */,
 			);
 			path = SplashScreenView;
+			sourceTree = "<group>";
+		};
+		74937D8928EC0BE600F0E79D /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		74937D8A28EC0BFA00F0E79D /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		74937D8B28EC0C0800F0E79D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		74937D8C28EC0C1F00F0E79D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
