@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct LoginView: View {
-    @State var userName:String = ""
-    @State var password:String = ""
+    //Add userName and password in ViewModel when we create ViewModel
+    @State var userName:String = emptyString
+    @State var password:String = emptyString
     @State var shouldShowPassword = true
     var body: some View {
         ScrollView {
