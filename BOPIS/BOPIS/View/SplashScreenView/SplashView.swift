@@ -13,7 +13,7 @@ struct SplashView: View {
     var body: some View {
         VStack {
             if isActive {
-                ContentView()
+                LoginView()
             } else {
                 Image("BOPIS-portait")
                     .resizable()

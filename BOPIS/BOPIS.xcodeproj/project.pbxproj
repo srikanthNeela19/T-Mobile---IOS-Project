@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5725FF4728EEAF2C001F3389 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5725FF4628EEAF2C001F3389 /* LoginView.swift */; };
+		5725FF4928EEDC73001F3389 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5725FF4828EEDC73001F3389 /* CheckBox.swift */; };
+		5725FF4E28EF0FB3001F3389 /* SecureTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5725FF4D28EF0FB3001F3389 /* SecureTextField.swift */; };
 		57D37FCC28EAFCEE00DEE676 /* BOPISApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D37FCB28EAFCEE00DEE676 /* BOPISApp.swift */; };
 		57D37FCE28EAFCEE00DEE676 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D37FCD28EAFCEE00DEE676 /* ContentView.swift */; };
 		57D37FD028EAFCEF00DEE676 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57D37FCF28EAFCEF00DEE676 /* Assets.xcassets */; };
@@ -23,6 +26,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5725FF4628EEAF2C001F3389 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		5725FF4828EEDC73001F3389 /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
+		5725FF4D28EF0FB3001F3389 /* SecureTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecureTextField.swift; sourceTree = "<group>"; };
 		57D37FC828EAFCEE00DEE676 /* BOPIS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BOPIS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57D37FCB28EAFCEE00DEE676 /* BOPISApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BOPISApp.swift; sourceTree = "<group>"; };
 		57D37FCD28EAFCEE00DEE676 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -50,6 +56,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5725FF4C28EF04E8001F3389 /* ReusableViews */ = {
+			isa = PBXGroup;
+			children = (
+				5725FF4828EEDC73001F3389 /* CheckBox.swift */,
+				5725FF4D28EF0FB3001F3389 /* SecureTextField.swift */,
+			);
+			path = ReusableViews;
+			sourceTree = "<group>";
+		};
 		57D37FBF28EAFCEE00DEE676 = {
 			isa = PBXGroup;
 			children = (
@@ -95,8 +110,10 @@
 		7437A7E228EB118500352915 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5725FF4C28EF04E8001F3389 /* ReusableViews */,
 				74937DA828EC10F800F0E79D /* ViewControllers */,
 				74937D8528EBEBB800F0E79D /* SplashScreenView */,
+				5725FF4628EEAF2C001F3389 /* LoginView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -240,12 +257,15 @@
 				57D37FCE28EAFCEE00DEE676 /* ContentView.swift in Sources */,
 				74937DFD28EC24E900F0E79D /* Network.swift in Sources */,
 				57D37FCC28EAFCEE00DEE676 /* BOPISApp.swift in Sources */,
+				5725FF4E28EF0FB3001F3389 /* SecureTextField.swift in Sources */,
 				7437A7ED28EB13BE00352915 /* IntExtension.swift in Sources */,
 				74937DFF28EC250D00F0E79D /* User.swift in Sources */,
+				5725FF4728EEAF2C001F3389 /* LoginView.swift in Sources */,
 				7437A7E928EB12FB00352915 /* Constant.swift in Sources */,
 				74937DFB28EC24BE00F0E79D /* CustomProtocols.swift in Sources */,
 				74937E0128EC252500F0E79D /* LoginViewModel.swift in Sources */,
 				74937D8728EBEBD700F0E79D /* SplashView.swift in Sources */,
+				5725FF4928EEDC73001F3389 /* CheckBox.swift in Sources */,
 				74937E0328EC262F00F0E79D /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
