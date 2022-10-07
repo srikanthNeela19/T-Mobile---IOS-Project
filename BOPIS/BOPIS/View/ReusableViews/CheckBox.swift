@@ -26,10 +26,8 @@ struct CheckBox: View {
     }
 }
 
-struct CheckBox_Previews: PreviewProvider {
-    @State static var isChecked:Bool = true
-    
+struct CheckBox_Previews: PreviewProvider {    
     static var previews: some View {
-        CheckBox(isChecked: $isChecked)
+        CheckBox(isChecked: .constant(true))
     }
 }

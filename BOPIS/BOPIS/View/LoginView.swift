@@ -26,19 +26,20 @@ struct LoginView: View {
                 .font(.largeTitle)
                 .fontWeight(.bold)
                 VStack {
-                    TextField("Email, Phone Number", text: $userName)
-                        .textFieldStyle(.plain)
-                        .textInputAutocapitalization(.never)
-                        .disableAutocorrection(true)
-                        .padding(.all)
-                    SecureTextField(shouldShowPassword: $shouldShowPassword, title: "Password", text: $password)
-                        .padding(.all)
-                    HStack{
+                    Group {
+                        TextField("Email, Phone Number", text: $userName)
+                            .textInputAutocapitalization(.never)
+                            .disableAutocorrection(true)
+                        SecureTextField(shouldShowPassword: $shouldShowPassword, title: "Password", text: $password)
+                    }
+                    .textFieldStyle(.roundedBorder)
+                    .padding(.all)
+                    
+                    HStack {
                         Spacer()
                         CheckBox(isChecked: $shouldShowPassword)
                         Text("Show Password")
                     }
-                    
                     .padding(.all)
                     Button {
                         print("Login Success")
@@ -51,27 +52,26 @@ struct LoginView: View {
                         }
                     }
                     .padding(.all)
-                    .background(Color("ThemeColor"))
+                    .background(Color("ThemeColor")) //Will add color from Common File
                     .cornerRadius(30)
                     .foregroundColor(.white)
+                    Group {
+                        Button(action: {
+                            print("Forgot")
+                        }, label:{
+                            Text("Forgot Password")
+                        })
+                        Button(action: {
+                            print("Sign Up")
+                        }, label:{
+                            Text("Sign Up")
+                        })
+                    }
+                    .foregroundColor(Color("ThemeColor")) //Will add color from Common File
+                    .padding(.all)
+                    Spacer()
                 }
                 .padding(.all)
-                
-                Group {
-                    Button(action: {
-                        print("Forgot")
-                    }, label:{
-                        Text("Forgot Password")
-                    })
-                    Button(action: {
-                        print("Sign Up")
-                    }, label:{
-                        Text("Sign Up")
-                    })
-                }
-                .foregroundColor(Color("ThemeColor"))
-                .padding(.all)
-                Spacer()
             }
         }
     }

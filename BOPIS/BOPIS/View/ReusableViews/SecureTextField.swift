@@ -21,9 +21,7 @@ struct SecureTextField: View {
 }
 
 struct SecureTextField_Previews: PreviewProvider {
-    @State static var shouldShowPassword:Bool = true
-    @State static var text:String = ""
     static var previews: some View {
-        SecureTextField(shouldShowPassword: $shouldShowPassword, title: "", text: $text)
+        SecureTextField(shouldShowPassword: .constant(true), title: "", text: .constant("ABC"))
     }
 }
