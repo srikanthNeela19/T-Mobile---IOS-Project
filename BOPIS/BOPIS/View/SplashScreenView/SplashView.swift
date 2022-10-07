@@ -15,10 +15,14 @@ struct SplashView: View {
             if isActive {
                 ContentView()
             } else {
-                Image("BOPIS-portait")
-                    .resizable()
-                    .scaledToFill()
-                    .ignoresSafeArea()
+                VStack{
+                    Image("TMobile")
+                        .resizable()
+                        .frame(width: 100, height: 100)
+                        .scaledToFit()
+                    Text("BOPIS")
+                        .font(.largeTitle)
+                }
             }
         }
         .onAppear {
