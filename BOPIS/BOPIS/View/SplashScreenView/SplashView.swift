@@ -13,7 +13,7 @@ struct SplashView: View {
     var body: some View {
         VStack {
             if isActive {
-                LoginView()
+                LoginView(viewModel: LoginViewModel())
             } else {
                 VStack{
                     Image("TMobile")

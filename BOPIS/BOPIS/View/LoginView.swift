@@ -7,10 +7,8 @@
 
 import SwiftUI
 
-struct LoginView: View {
-    //Add userName and password in ViewModel when we create ViewModel
-    @State var userName:String = emptyString
-    @State var password:String = emptyString
+struct LoginView<ViewModel:ProtocolLoginViewModel>: View {
+    @StateObject var viewModel:ViewModel
     @State var shouldShowPassword = true
     var body: some View {
         ScrollView {
@@ -28,10 +26,10 @@ struct LoginView: View {
                 .fontWeight(.bold)
                 VStack {
                     Group {
-                        TextField("Email, Phone Number", text: $userName)
+                        TextField("Email, Phone Number", text: $viewModel.userEmailOrPhone)
                             .textInputAutocapitalization(.never)
                             .disableAutocorrection(true)
-                        SecureTextField(shouldShowPassword: $shouldShowPassword, title: "Password", text: $password)
+                        SecureTextField(shouldShowPassword: $shouldShowPassword, title: "Password", text: $viewModel.password)
                     }
                     .textFieldStyle(.roundedBorder)
                     .padding(.all)
@@ -43,7 +41,10 @@ struct LoginView: View {
                     }
                     .padding(.all)
                     Button {
-                        print("Login Success")
+                        if viewModel.validateLogin() {
+                            //API Call from viewModel and navigate accordingly
+                            print("Login Success")
+                        }
                     } label: {
                         HStack {
                             Spacer()
@@ -75,11 +76,12 @@ struct LoginView: View {
                 .padding(.all)
             }
         }
+        .alert(alertViewModel: viewModel.alertViewModel)
     }
 }
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView()
+        LoginView(viewModel: LoginViewModel())
     }
 }
