@@ -6,29 +6,36 @@
 //
 
 import Foundation
-struct ErrorDetails: Identifiable {
-    let id = UUID()
-    let name: String = "Error"
-    let error: String
-}
 
-protocol ProtocalLoginViewModel:ObservableObject {
+protocol ProtocolLoginViewModel:ObservableObject {
+    associatedtype T:ProtocolAlertViewModel
     var userEmailOrPhone: String { get set }
     var password: String { get set }
-    var errorDetails: ErrorDetails? { get }
+    var alertViewModel:T { get }
+    
     func validateLogin() -> Bool
+    func signIn() -> Bool
 }
 
-class LoginViewModel:ProtocalLoginViewModel {
+class LoginViewModel<T:ProtocolAlertViewModel>:ProtocolLoginViewModel {
     @Published var userEmailOrPhone: String = emptyString
     @Published var password: String = emptyString
-    var errorDetails: ErrorDetails?
+    var alertViewModel: T
+    
+    init(alertViewModel: T = AlertViewModel()) {
+        self.alertViewModel = alertViewModel
+    }
 
     func validateLogin() -> Bool {
+        // Parform all validations here and pass messages accodingly
         if userEmailOrPhone.isEmpty || password.isEmpty {
-            errorDetails = ErrorDetails(error: "Please enter Email/Phone and Password")
+            alertViewModel.showMessage(title: "Invalid Data", text: "Please fill all fields!")
             return false
         }
+        return true
+    }
+    
+    func signIn() -> Bool {
         return true
     }
 }

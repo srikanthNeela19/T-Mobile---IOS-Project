@@ -7,9 +7,8 @@
 
 import SwiftUI
 
-struct LoginView<T:ProtocalLoginViewModel>: View {
-    @StateObject var viewModel:T
-    @State var didError = false
+struct LoginView<ViewModel:ProtocolLoginViewModel>: View {
+    @StateObject var viewModel:ViewModel
     @State var shouldShowPassword = true
     var body: some View {
         ScrollView {
@@ -42,9 +41,8 @@ struct LoginView<T:ProtocalLoginViewModel>: View {
                     }
                     .padding(.all)
                     Button {
-                        didError = !viewModel.validateLogin()
-                        if !didError {
-                            //API Call from viewModel
+                        if viewModel.validateLogin() {
+                            //API Call from viewModel and navigate accordingly
                             print("Login Success")
                         }
                     } label: {
@@ -77,13 +75,8 @@ struct LoginView<T:ProtocalLoginViewModel>: View {
                 }
                 .padding(.all)
             }
-            .alert(isPresented: $didError) {
-                Alert(
-                    title: Text(viewModel.errorDetails?.name ?? ""),
-                    message: Text(viewModel.errorDetails?.error ?? "")
-                )
-            }
         }
+        .alert(alertViewModel: viewModel.alertViewModel)
     }
 }
 
